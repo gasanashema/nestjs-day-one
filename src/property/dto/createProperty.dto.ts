@@ -5,6 +5,8 @@ export class CreatePropertyDto {
   @Length(2,10)
   name: string;
   @IsString()
+  @Length(2,10,{groups:['create']})
+  @Length(1,15,{groups:['update']})
   description: string;
   @IsInt()
   area: number;
